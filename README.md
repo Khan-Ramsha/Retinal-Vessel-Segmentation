@@ -36,7 +36,7 @@ https://github.com/user-attachments/assets/52a8102f-d03b-47b7-9d94-a4443b7d5bac
 ## Inference
 
 - **Format**: PyTorch → ONNX (FP16 quantized)
-- **Optimization**: 50% model size reduction (from X MB to X MB), 2× inference speedup
+- **Optimization**: ~50.2% model size reduction (from 243 MB to 121 MB), 2× inference speedup
 - **Compatibility**: Edge device ready, no accuracy degradation
 
 ## Benchmarked Model on Cross Dataset (DRIVE)
@@ -45,4 +45,5 @@ https://github.com/user-attachments/assets/52a8102f-d03b-47b7-9d94-a4443b7d5bac
 ## Loss Function
 
 #### Weighted Combined Loss = 0.5 * DiceLoss + 0.3 * Binary Cross Entropy Loss + 0.2 * Focal Loss
+
 
