@@ -41,8 +41,8 @@ https://github.com/user-attachments/assets/52a8102f-d03b-47b7-9d94-a4443b7d5bac
 | **Test** | 0.082 | 0.797 | 0.887 | 0.984 |
 | **Cross-dataset (DRIVE)** | 0.164 | 0.637 | 0.778 | 0.962 | 
 
-> **Note:** The model maintains strong segmentation performance on both validation and test data, with ~2% Accuracy and ~10% Dice drop on cross-dataset - proving model generalization.
-
+> **Note:** The model shows stable in-domain performance (val/test Dice: 0.89 on FIVES, no overfitting). On cross-dataset (DRIVE), it maintains 96.2% accuracy despite a ~12% Dice drop from fundus acquisition shifts—demonstrating residual blocks, preprocessing and augmentation's role in generalization.
+> 
 ## Inference
 
 - **Format**: PyTorch → ONNX (FP16 quantized)
@@ -52,6 +52,7 @@ https://github.com/user-attachments/assets/52a8102f-d03b-47b7-9d94-a4443b7d5bac
 ## Loss Function
 
 #### Weighted Combined Loss = 0.5 * DiceLoss + 0.3 * Binary Cross Entropy Loss + 0.2 * Focal Loss
+
 
 
 
