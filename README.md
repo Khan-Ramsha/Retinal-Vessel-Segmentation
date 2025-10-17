@@ -33,17 +33,25 @@ https://github.com/user-attachments/assets/52a8102f-d03b-47b7-9d94-a4443b7d5bac
 
 <img width="800" height="521" alt="Screenshot 2025-10-15 120334" src="https://github.com/user-attachments/assets/fcd9325c-6586-45b1-9641-f9932b22b0c0" />
 
+### Performance Metrics
+
+| Dataset | Loss | IoU | Dice | Accuracy |   
+|----------|------|------|------|-----------|
+| **Validation** | 0.082 | 0.796 | 0.886 | 0.984 | 
+| **Test** | 0.082 | 0.797 | 0.887 | 0.984 |
+| **Cross-dataset (DRIVE)** | 0.164 | 0.637 | 0.778 | 0.962 | 
+
+> **Note:** The model maintains strong segmentation performance on both validation and test data, with ~2% Accuracy and ~10% Dice drop on cross-dataset - proving model generalization.
+
 ## Inference
 
 - **Format**: PyTorch → ONNX (FP16 quantized)
 - **Optimization**: ~50.2% model size reduction (from 243 MB to 121 MB), 2× inference speedup
 - **Compatibility**: Edge device ready, no accuracy degradation
 
-## Benchmarked Model on Cross Dataset (DRIVE)
-2% Accuracy dropped and 10% dice score dropped. 
-
 ## Loss Function
 
 #### Weighted Combined Loss = 0.5 * DiceLoss + 0.3 * Binary Cross Entropy Loss + 0.2 * Focal Loss
+
 
 
