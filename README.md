@@ -55,12 +55,12 @@ https://github.com/user-attachments/assets/52a8102f-d03b-47b7-9d94-a4443b7d5bac
 
 ### Input Image
 
-<img width="973" height="966" alt="img_0" src="https://github.com/user-attachments/assets/b1983b34-618d-46ac-a4d2-2ef8603896c4" />
+<img width="300" height="400" alt="img_0" src="https://github.com/user-attachments/assets/b1983b34-618d-46ac-a4d2-2ef8603896c4" />
 
 
 ### Ground Truth
 
-<img width="2048" height="2048" alt="100_D" src="https://github.com/user-attachments/assets/5454890b-0c62-482e-ae86-d40fada3a110" />
+<img width="300" height="400" alt="100_D" src="https://github.com/user-attachments/assets/5454890b-0c62-482e-ae86-d40fada3a110" />
 
 ### Output Image
 
@@ -70,5 +70,6 @@ https://github.com/user-attachments/assets/52a8102f-d03b-47b7-9d94-a4443b7d5bac
 
 
 https://github.com/user-attachments/assets/db1c5b2c-8379-40cd-b77e-300a8421e0e2
+
 
 
