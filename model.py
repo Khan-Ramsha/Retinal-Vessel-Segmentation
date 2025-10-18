@@ -44,43 +44,43 @@ class ResUNetDeeper(nn.Module):
         )
         # Drop out
         self.dropout = nn.Dropout2d(p = 0.2)
-        # Encoder - 2 BLOCKS PER LEVEL (this is the key change!)
+
         self.encoder1_1 = ResidualBlock(base_filters, base_filters)
-        self.encoder1_2 = ResidualBlock(base_filters, base_filters)  # NEW
+        self.encoder1_2 = ResidualBlock(base_filters, base_filters)  
         self.pool1 = nn.MaxPool2d(kernel_size=2, stride=2)
         
         self.encoder2_1 = ResidualBlock(base_filters, base_filters * 2)
-        self.encoder2_2 = ResidualBlock(base_filters * 2, base_filters * 2)  # NEW
+        self.encoder2_2 = ResidualBlock(base_filters * 2, base_filters * 2)
         self.pool2 = nn.MaxPool2d(kernel_size=2, stride=2)
         
         self.encoder3_1 = ResidualBlock(base_filters * 2, base_filters * 4)
-        self.encoder3_2 = ResidualBlock(base_filters * 4, base_filters * 4)  # NEW
+        self.encoder3_2 = ResidualBlock(base_filters * 4, base_filters * 4)  
         self.pool3 = nn.MaxPool2d(kernel_size=2, stride=2)
         
         self.encoder4_1 = ResidualBlock(base_filters * 4, base_filters * 8)
-        self.encoder4_2 = ResidualBlock(base_filters * 8, base_filters * 8)  # NEW
+        self.encoder4_2 = ResidualBlock(base_filters * 8, base_filters * 8) 
         self.pool4 = nn.MaxPool2d(kernel_size=2, stride=2)
         
         # Bridge - 2 BLOCKS
         self.bridge1 = ResidualBlock(base_filters * 8, base_filters * 16)
-        self.bridge2 = ResidualBlock(base_filters * 16, base_filters * 16)  # NEW
+        self.bridge2 = ResidualBlock(base_filters * 16, base_filters * 16)
         
         # Decoder - 2 BLOCKS PER LEVEL
         self.upconv4 = nn.ConvTranspose2d(base_filters * 16, base_filters * 8, kernel_size=2, stride=2)
         self.decoder4_1 = ResidualBlock(base_filters * 16, base_filters * 8)
-        self.decoder4_2 = ResidualBlock(base_filters * 8, base_filters * 8)  # NEW
+        self.decoder4_2 = ResidualBlock(base_filters * 8, base_filters * 8)
         
         self.upconv3 = nn.ConvTranspose2d(base_filters * 8, base_filters * 4, kernel_size=2, stride=2)
         self.decoder3_1 = ResidualBlock(base_filters * 8, base_filters * 4)
-        self.decoder3_2 = ResidualBlock(base_filters * 4, base_filters * 4)  # NEW
+        self.decoder3_2 = ResidualBlock(base_filters * 4, base_filters * 4) 
         
         self.upconv2 = nn.ConvTranspose2d(base_filters * 4, base_filters * 2, kernel_size=2, stride=2)
         self.decoder2_1 = ResidualBlock(base_filters * 4, base_filters * 2)
-        self.decoder2_2 = ResidualBlock(base_filters * 2, base_filters * 2)  # NEW
+        self.decoder2_2 = ResidualBlock(base_filters * 2, base_filters * 2)  
         
         self.upconv1 = nn.ConvTranspose2d(base_filters * 2, base_filters, kernel_size=2, stride=2)
         self.decoder1_1 = ResidualBlock(base_filters * 2, base_filters)
-        self.decoder1_2 = ResidualBlock(base_filters, base_filters)  # NEW
+        self.decoder1_2 = ResidualBlock(base_filters, base_filters)  
         
         # Output
         self.output = nn.Conv2d(base_filters, num_classes, kernel_size=1)

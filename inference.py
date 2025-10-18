@@ -72,8 +72,8 @@ infer_transform = get_test_augmentation()
 img = "user_imgs/input"
 os.makedirs("models", exist_ok=True)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-infer_dataset = InferDataset(img, transform = infer_transform)
-infer_dataloader = torch.utils.data.DataLoader(infer_dataset, batch_size = 1, shuffle = False)
+# infer_dataset = InferDataset(img, transform = infer_transform)
+# infer_dataloader = torch.utils.data.DataLoader(infer_dataset, batch_size = 1, shuffle = False)
 
 def infer(model_path, infer_dataloader):
     print('Available Execution providers: ',ort.get_available_providers())
