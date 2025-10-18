@@ -53,8 +53,22 @@ https://github.com/user-attachments/assets/52a8102f-d03b-47b7-9d94-a4443b7d5bac
 
 #### Weighted Combined Loss = 0.5 * DiceLoss + 0.3 * Binary Cross Entropy Loss + 0.2 * Focal Loss
 
+### Input Image
+
+<img width="973" height="966" alt="img_0" src="https://github.com/user-attachments/assets/b1983b34-618d-46ac-a4d2-2ef8603896c4" />
 
 
+### Ground Truth
 
+<img width="2048" height="2048" alt="100_D" src="https://github.com/user-attachments/assets/5454890b-0c62-482e-ae86-d40fada3a110" />
+
+### Output Image
+
+<img width="512" height="512" alt="pred_0" src="https://github.com/user-attachments/assets/2f14c41e-f6d8-4482-a21a-6f48d9aae2b5" />
+
+## Demo
+
+
+https://github.com/user-attachments/assets/db1c5b2c-8379-40cd-b77e-300a8421e0e2
 
 
